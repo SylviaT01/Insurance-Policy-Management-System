@@ -51,7 +51,7 @@ const PolicyForm = ({ onAdd }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="p-4 border rounded shadow-md">
+      <form onSubmit={handleSubmit} className="p-4 border rounded shadow-lg bg-gray-200 ml-20 mr-20 mt-10">
         <h2 className="text-lg font-bold">Add Policy</h2>
         <input
           type="text"

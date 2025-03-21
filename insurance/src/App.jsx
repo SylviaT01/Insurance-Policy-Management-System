@@ -16,7 +16,7 @@ function App() {
           <Route path="/add-policy" element={<PolicyForm />} />
           <Route path="/policies" element={<Dashboard />} />
         </Routes>
-        <Footer />
+        {/* ?<Footer /> */}
       </div>
     </Router>
   );
