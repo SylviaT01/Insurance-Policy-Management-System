@@ -1,3 +1,5 @@
+import Footer from './Footer'
+
 const Home = () => {
     const policies = [
         { name: "Health Insurance", description: "Covers medical expenses and hospitalization costs.", color: "bg-green-200" },
@@ -9,25 +11,35 @@ const Home = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-center p-6">
-            <div className="h-[400px]">
-                <h1 className="text-4xl font-bold text-gray-900">Welcome to the Insurance Policy Management System</h1>
-                <p className="text-lg text-gray-700 mt-4">
-                    Manage your insurance policies with ease. View, add, edit, and delete policies seamlessly.
-                </p>
-                <div className="mt-6">
-                    <a href="/policies" className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">
-                        Go to Dashboard
-                    </a>
+        <>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300 text-center">
+            <div 
+                className="w-full relative bg-cover bg-center bg-no-repeat p-20 rounded-lg shadow-lg opacity-50"
+                style={{ backgroundImage: "url('https://img.freepik.com/free-photo/health-insurance-assurnace-medical-risk-safety-concept_53876-132324.jpg?t=st=1742552214~exp=1742555814~hmac=3f604df2cf15e1abef51803c3666b3b67777fcef2abe8519c9bd9f76233fc2b7&w=900')" }}  
+            >
+                
+
+             
+                <div className="relative z-50 text-black w-full  mx-auto">
+                    <h1 className="text-5xl font-bold">Welcome to the Insurance Policy Management System</h1>
+                    <p className="text-xl mt-4">
+                        Manage your insurance policies with ease. View, add, edit, and delete policies seamlessly.
+                    </p>
+                    <div className="mt-6">
+                        <a href="/policies" className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">
+                            Go to Dashboard
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div>
+
+
+            <div className="w-full mt-10">
                 <p className="text-lg text-gray-700 mb-8">
                     Explore the different types of policies we offer.
                 </p>
 
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {policies.map((policy, index) => (
                         <div
                             key={index}
@@ -39,7 +51,11 @@ const Home = () => {
                     ))}
                 </div>
             </div>
+            
         </div>
+        <Footer />
+        </>
+
 
     );
 };

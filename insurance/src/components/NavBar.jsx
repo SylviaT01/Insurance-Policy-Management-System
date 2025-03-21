@@ -19,12 +19,12 @@ export const NavBar = () => {
     return (
         <nav className="bg-gray-900 w-full">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Logo */}
+                
                 <Link to="/" className="text-yellow-500 font-bold text-2xl">
                     Insurance<span className="text-white">Policy</span>
                 </Link>
 
-                {/* Hamburger Icon */}
+                
                 <button
                     className="text-white md:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -32,7 +32,7 @@ export const NavBar = () => {
                     <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="text-2xl" />
                 </button>
 
-                {/* Navigation Links */}
+               
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
