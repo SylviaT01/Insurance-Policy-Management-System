@@ -3,6 +3,7 @@ import { NavBar } from "./components/NavBar";
 import PolicyForm from './components/PolicyForm';
 import "./App.css";
 import Dashboard from "./components/Dashboard";
+import Footer from './components/Footer'
 import Home from "./components/Home";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/add-policy" element={<PolicyForm />} />
           <Route path="/policies" element={<Dashboard />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
