@@ -25,7 +25,7 @@ const PolicyForm = ({ onAdd }) => {
       policy_type: type
     };
     
-    fetch("http://127.0.0.1:5000/policy", {
+    fetch("https://backend-ims-16w9.onrender.com/policy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPolicy),

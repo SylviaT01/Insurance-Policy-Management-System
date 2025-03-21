@@ -14,7 +14,7 @@ const PolicyItem = ({ policy, onUpdate, onDelete }) => {
     const updatedPolicy = { holder_name: holderName, policy_type: type, premium_amount: parseFloat(premium) };
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/policy/${policy.id}`, {
+      const response = await fetch(`https://backend-ims-16w9.onrender.com/policy/${policy.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedPolicy),
@@ -35,7 +35,7 @@ const PolicyItem = ({ policy, onUpdate, onDelete }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/policy/${policy.id}`, { method: "DELETE" });
+      const response = await fetch(`https://backend-ims-16w9.onrender.com/policy/${policy.id}`, { method: "DELETE" });
 
       if (!response.ok) throw new Error("Failed to delete policy");
 
