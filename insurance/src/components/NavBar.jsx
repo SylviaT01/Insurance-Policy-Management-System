@@ -47,6 +47,23 @@ export const NavBar = () => {
                         >
                             Home
                         </Link>
+                        
+                        <Link
+                            to="/policies"
+                            className="text-white hover:text-yellow-400 py-2 md:py-0"
+                            onClick={handleLinkClick}
+                        
+                        >
+                            Our Policies
+                        </Link>
+                        <Link
+                            to="/add-policy"
+                            className="text-white hover:text-yellow-400 py-2 md:py-0"
+                            onClick={handleLinkClick}
+                        
+                        >
+                            Add Policy
+                        </Link>
                     </div>
                 </div>
             </div>
