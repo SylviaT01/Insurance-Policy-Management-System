@@ -49,13 +49,18 @@ const PolicyItem = ({ policy, onUpdate, onDelete }) => {
   };
 
   return (
-    <div className="border p-4 rounded-lg shadow-md bg-white">
+    <div className=" p-4 rounded-lg shadow-lg bg-slate-200">
       {isEditing ? (
         <div>
           <input type="text" value={holderName} onChange={(e) => setHolderName(e.target.value)} className="w-full p-2 border rounded mt-2" />
           <input type="text" value={type} onChange={(e) => setType(e.target.value)} className="w-full p-2 border rounded mt-2" />
           <input type="number" value={premium} onChange={(e) => setPremium(e.target.value)} className="w-full p-2 border rounded mt-2" />
+          <div className='flex gap-4'>
           <button onClick={handleUpdate} className="bg-green-500 text-white px-3 py-1 rounded mt-3">Save</button>
+          <button onClick={() => setIsEditing(false)} className="bg-gray-400 text-white px-3 py-1 rounded mt-3">
+          Cancel
+        </button>
+        </div>
         </div>
       ) : (
         <>
@@ -63,8 +68,8 @@ const PolicyItem = ({ policy, onUpdate, onDelete }) => {
           <p><strong>Premium Amount:</strong> {policy.premium_amount}</p>
           <p><strong>Type:</strong> {policy.policy_type}</p>
           <div className="mt-4 flex justify-between">
-            <button onClick={handleEdit} className="bg-blue-500 text-white px-3 py-1 rounded">Edit</button>
-            <button onClick={handleDelete} className="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
+            <button onClick={handleEdit} className="bg-gray-500 text-white px-3 py-1 rounded">Edit</button>
+            <button onClick={handleDelete} className="bg-red-300 text-white px-3 py-1 rounded">Delete</button>
           </div>
         </>
       )}

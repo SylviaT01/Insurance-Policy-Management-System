@@ -62,14 +62,14 @@ const PolicyForm = ({ onAdd }) => {
             placeholder="Policy Holder Name"
             value={holderName}
             onChange={(e) => setHolderName(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400 focus:outline-none mt-3"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:outline-none mt-3"
             required
           />
           
           <select
             value={type}
             onChange={(e) => setType(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400 focus:outline-none mt-3"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:outline-none mt-3"
             required
           >
             <option value="" disabled>Select Policy Type</option>
