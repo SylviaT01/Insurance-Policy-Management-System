@@ -3,6 +3,7 @@ import PolicyItem from "./PolicyItem";
 import SearchFilter from "./SearchFilter";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import Footer from './Footer'
 
 const Dashboard = () => {
   const [policies, setPolicies] = useState([]);
@@ -38,6 +39,7 @@ const Dashboard = () => {
   );
 
   return (
+    <>
     <div className="container mx-auto p-6">
       <h1 className="text-2xl font-bold text-center mb-4">Insurance Policies</h1>
       <SearchFilter setSearchTerm={setSearchTerm} />
@@ -67,6 +69,9 @@ const Dashboard = () => {
         </div>
       )}
     </div>
+    <Footer />
+    </>
+
   );
 };
 

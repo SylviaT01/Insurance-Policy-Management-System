@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from './Footer'
 
 const PolicyForm = ({ onAdd }) => {
   const [holderName, setHolderName] = useState("");
@@ -50,7 +51,7 @@ const PolicyForm = ({ onAdd }) => {
 
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen bg-gray-300">
+      <div className="flex justify-center items-center min-h-screen bg-gray-200">
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-md p-6 bg-white rounded-2xl shadow-lg"
@@ -97,6 +98,7 @@ const PolicyForm = ({ onAdd }) => {
       </div>
       
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+      <Footer />
     </>
   );
 };
