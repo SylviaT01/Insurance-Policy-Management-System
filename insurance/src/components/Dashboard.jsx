@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import PolicyItem from "./PolicyItem";
 import SearchFilter from "./SearchFilter";

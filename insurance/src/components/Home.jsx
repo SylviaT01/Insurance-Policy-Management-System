@@ -1,4 +1,5 @@
 import Footer from './Footer'
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -26,9 +27,10 @@ const Home = () => {
                             Manage your insurance policies with ease. View, add, edit, and delete policies seamlessly.
                         </p>
                         <div className="mt-6">
-                            <a href="/policies" className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 hover:text-black">
+                            <Link to="/policies" className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 hover:text-black">Go to Dashboard</Link>
+                            {/* <a href="/policies" className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 hover:text-black">
                                 Go to Dashboard
-                            </a>
+                            </a> */}
                         </div>
 
                     </div>
