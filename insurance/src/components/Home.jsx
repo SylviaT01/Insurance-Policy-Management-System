@@ -28,9 +28,6 @@ const Home = () => {
                         </p>
                         <div className="mt-6">
                             <Link to="/policies" className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 hover:text-black">Go to Dashboard</Link>
-                            {/* <a href="/policies" className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 hover:text-black">
-                                Go to Dashboard
-                            </a> */}
                         </div>
 
                     </div>
