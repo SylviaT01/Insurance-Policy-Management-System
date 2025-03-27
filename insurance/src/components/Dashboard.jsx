@@ -1,8 +1,9 @@
+
+
 import { useEffect, useState } from "react";
 import PolicyItem from "./PolicyItem";
 import SearchFilter from "./SearchFilter";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import { ClipLoader } from "react-spinners";
 import Footer from './Footer'
 
 const Dashboard = () => {
@@ -46,16 +47,7 @@ const Dashboard = () => {
 
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <div className="w-16 h-16">
-            <CircularProgressbar
-              value={100}
-              styles={buildStyles({
-                pathColor: "#010630",
-                textColor: "#010630",
-                trailColor: "#d6d6d6",
-              })}
-            />
-          </div>
+          <ClipLoader height="80" width="80" color="#010630" ariaLabel="loading" />
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -71,9 +63,7 @@ const Dashboard = () => {
     </div>
     <Footer />
     </>
-
   );
 };
 
 export default Dashboard;
-
