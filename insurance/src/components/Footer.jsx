@@ -11,8 +11,10 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} All Rights Reserved.</p>
   
           <div className="flex row space-x-6">
-            <a href="/" className="text-gray-400 hover:text-white transition">About Us</a>
-            <a href="/" className="text-gray-400 hover:text-white transition">Contact</a>
+            {/* <a href="/" className="text-gray-400 hover:text-white transition">About Us</a> */}
+            <Link to='/' className="text-gray-400 hover:text-white transition">About Us</Link>
+            {/* <a href="/" className="text-gray-400 hover:text-white transition">Contact</a> */}
+            <Link to='/' className="text-gray-400 hover:text-white transition">Contact</Link>
             <Link to="/policies"  className="text-gray-400 hover:text-white transition">Policies</Link>
             {/* <a href="/policies" className="text-gray-400 hover:text-white transition">Policies</a> */}
           </div>
